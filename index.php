@@ -1,13 +1,10 @@
 
+<?php
+//Composerでインストールしたライブラリを一括読み込み
+reuire_once __DIR__ . 'vendor/autoload.php'
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>sample</title>
-<meta charset="utf-8">
-</head>
-<body>
-Hello World
-</body>
-</html>
+//POSTメソッドで渡される値を取得、表示
+$inputString = file_get_contents('php://input');
+error_log($inputString)
+
+?>
